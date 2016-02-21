@@ -1,0 +1,124 @@
+
+
+
+body {
+  background-color: #EBF0F1; }
+   h1 {
+    font: "Open Sans"; }
+   button,  button:hover {
+    border-radius: 30px;
+    padding: 10px 20px;
+    background: none;
+    border-style: solid;
+    border-color: #4EADEF; }
+   button:hover {
+    border-color: #4EADEF; }
+   ul,  #sidebar ul,  #topbar ul {
+    margin: 0px;
+    list-style: none;
+    padding: 0px; }
+  #sidebar,  #topbar {
+    border: none;
+    margin: 0px;
+    float: left;
+    height: 100%;
+    width: 120px;
+    background-color: #4A4A4A;
+    position: fixed;
+    z-index: 5; }
+     #sidebar #logo,  #topbar #logo {
+      color: #FFFFFF;
+      font-size: 2.5em;
+      font-family: "Mastoc Personal Use Only";
+      text-align: center;
+      line-height: 120%;
+      margin-top: 30px; }
+     #sidebar ul,  #topbar ul {
+      margin-top: 20px;
+      text-align: center; }
+       #sidebar ul li,  #topbar ul li {
+        color: #B7B7B7;
+        margin-left: 0px;
+        padding: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 1em;
+        height: 60px; }
+      
+
+       #sidebar ul li{
+        padding: 0px;
+        height: auto;
+      }
+       #sidebar ul li.selected,  #topbar ul li.selected {
+        color: #FFFFFF;
+        background-color: #2B2B2B; }
+   #topbar {
+    width: 100%;
+    height: 100px;
+    background-color: #4EADEF;
+    z-index: 2; }
+     #topbar ul {
+      margin-top: -13px;
+      list-style: none;
+      padding-left: 15%;
+      text-align: left;
+      width: auto;
+      float: left; }
+       #topbar ul li {
+        width: 150px;
+        margin: auto;
+        display: block;
+        letter-spacing: .025em;
+        color: #9DD1F6;
+        font-weight: 200;
+        text-align: center;
+        display: inline-block;
+        font-size: 1.3em;
+        height: auto; }
+         #topbar ul li #circle {
+          width: 85px;
+          height: 85px;
+          margin: auto;
+          border-radius: 50%;
+          border-width: 8px;
+          border-style: solid;
+          border-color: #D8D8D8;
+          background-color: #9C9C9C;
+          opacity: 1;
+          z-index: 4; }
+           #topbar ul li #circle h1 {
+            padding: 0px;
+            margin-top: 13px;
+            color: #FFFFFF; }
+         #topbar ul li #circle.active {
+          background-color: #4EADEF; }
+       #topbar ul li.selected {
+        color: #FFFFFF;
+        background-color: transparent; }
+       #topbar ul hr {
+        margin-top: -66px;
+        width: 80%;
+        border-width: 8px;
+        border-color: #D8D8D8;
+        z-index: 3; }
+   #main {
+    border-radius: 15px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #9C9C9C;
+    position: relative;
+    top: 180px;
+    left: 175px;
+    z-index: 1;
+    background-color: white;
+    width: 50%;
+    height: 500px; }
+
+      #sidebar ul li span{
+    height: 70px;
+    display: table-cell;
+    vertical-align: middle;
+    /*margin: auto;*/
+    width: 120px;
+  }

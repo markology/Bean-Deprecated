@@ -24,7 +24,8 @@ System.register(['angular2/core'], function(exports_1) {
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: "my-app",
-                        template: "<h1>hellrttygtfhsdfo</h1>"
+                        template: "<div id=\"topbar\">\n    <ul>\n        <li class=\"selected\">Basic Info\n            <div id=\"circle\" class=\"active\">\n                <h1>1</h1>\n            </div>\n        </li>\n        <li>Interested Activities\n            <div id=\"circle\">\n                <h1>2</h1>\n            </div>\n        </li>\n        <li>Passion and Needs\n            <div id=\"circle\">\n                <h1>3</h1>\n            </div>\n        </li>\n        <li>Summary\n            <div id=\"circle\" >\n                <h1>4</h1>\n            </div>\n        </li>\n        <hr>\n    </ul>\n</div>\n\n<div id=\"sidebar\">\n    <div id=\"logo\">\n        Tell Us Who\n    </div>\n    <ul>\n        <li class=\"selected\"><span>Background</span></li>\n        <li><span>School and Work</span></li>\n        <li><span>Meeting people</span></li>\n        <li><span>Sense of community</span></li>\n        <li><span>Wellbeing</span></li>\n    </ul>\n</div>\n\n<div id=\"main\">\n    <div >\n        <label for=\"DOB\"> Date of Birth:</label> <br>\n        <input id=\"DOB\" />\n\n    </div>\n</div>\n\n<button>Things</button>",
+                        styleUrls: ['app/style.css']
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
