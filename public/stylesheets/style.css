@@ -1,4 +1,11 @@
-
+@import url("../fonts/HWT_Artz.otf");
+@import url("../fonts/Mastoc_PersonalUseOnly.ttf");
+@import url("../fonts/opensans-bold.ttf");
+@import url("../fonts/OpenSans-Regular.ttf");
+@import url("../fonts/OpenSans-Light.ttf");
+@import url("../fonts/OpenSans-Italic.ttf");
+@import url("../fonts/OpenSans-Semibold.ttf");
+@import url("../fonts/ProximaNova-Reg.ttf");
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
