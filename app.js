@@ -44,9 +44,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, '/public/stylesheets')));
 app.use(express.static(path.join(__dirname, '/node_modules')));
 app.use(express.static(path.join(__dirname, '/')));
+//makes main.js work
 app.use(express.static(path.join(__dirname, '/app')));
-app.use(express.static('public'));
-app.use(express.static('public/stylesheets'));
+// app.use(express.static('public'));
+// app.use(express.static('public/stylesheets'));
 
 
 
@@ -55,6 +56,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/form', form);
 app.use('/create', form);
+// app.use('/background', index);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

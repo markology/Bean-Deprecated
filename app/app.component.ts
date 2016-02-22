@@ -1,4 +1,10 @@
-import {Component, View} from 'angular2/core';
+import {Component, View, OnInit} from 'angular2/core'
+import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
+import {BackgroundInfoComponent} from './backgroundInfo.component.js'
+
+
+// < a[routerLink]="['BackgroundInfo']" > Dashboard < /a>
+
 
 @Component({
 	selector: "my-app",
@@ -40,20 +46,32 @@ import {Component, View} from 'angular2/core';
         <li><span>Wellbeing</span></li>
     </ul>
 </div>
-
-<div id="main">
-    <div >
-        <label for="DOB"> Date of Birth:</label> <br>
-        <input id="DOB" />
-
-    </div>
-</div>
-
-<button>Things</button>`,
-styleUrls:['app/style.css']
+<span id="overlay"><h2>Great, let's get started! First we need to know some of the basics.</h2><span id="overlayButton">Ok got it</span></span>
+<router-outlet></router-outlet>
+`
+,
+styleUrls:['app/style.css'],
+directives: [ROUTER_DIRECTIVES],
+providers: [ROUTER_PROVIDERS],
 })
 
+@RouteConfig([
+	{
+		path: '/',
+		name: 'BackgroundInfo',
+		component: BackgroundInfoComponent
+	}	
 
-export class AppComponent{
-	title = "fuck off"
+])
+
+
+export class AppComponent implements OnInit{
+    title = "fuck off"
+
+    ngOnInit(){
+        document.getElementById("overlayButton").addEventListener('click',
+            function() {
+                document.getElementById('overlay').style.display = "none";
+            });    
+    }
 }

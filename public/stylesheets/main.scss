@@ -1,0 +1,318 @@
+@import url('../fonts/HWT_Artz.otf');
+@import url('../fonts/Mastoc_PersonalUseOnly.ttf');
+@import url('../fonts/opensans-bold.ttf');
+@import url('../fonts/OpenSans-Regular.ttf');
+@import url('../fonts/OpenSans-Light.ttf');
+@import url('../fonts/OpenSans-Italic.ttf');
+@import url('../fonts/OpenSans-Semibold.ttf');
+@import url('../fonts/ProximaNova-Reg.ttf');
+
+//fonts
+$opensans: 'Open Sans'; $mastoc: 'Mastoc Personal Use Only';
+
+//Colors
+$white:   #FFFFFF;   $gray0:   #F9F9F9;     $gray1:  #EBF0F1;    $gray2:  #D8D8D8;     $gray3:     #B7B7B7;
+$gray4:   #ACACAC;   $gray5:   #9C9C9C;     $gray6:  #4A4A4A;    $blue:   #4EADEF;     $lightBlue: #4EADEF;
+$green:   #00EC90;   $green2:  #00D381;     $peach:  #E68989;    $red:    #F12929;     $black:     #2B2B2B;
+$lb2:     #9DD1F6;
+
+/*
+     Sidebar:                         Topbar:                             Main:
+      #Logo                             #circle (for the steps)
+                                          .(active, complete)
+
+*/
+body  {
+  background-color: $gray1;
+  h1 {
+    font: $opensans;
+  }
+  button{
+    border-radius: 30px;
+    padding: 10px 20px;
+    background: none;
+    border-style: solid;
+    border-color: $blue;
+  }
+  button:hover{
+    @extend button;
+    border-color: $lightBlue;
+  }
+  ul{
+    margin: 0px;
+    list-style: none;
+    padding: 0px;
+  }
+  //------------------------          SIDEBAR
+  #sidebar{
+    border: none;
+    margin: 0px;
+    float: left;
+    height: 100%;
+    width: 120px;
+    background-color: $gray6;
+    position: fixed;
+    z-index: 100;
+    #logo{                          //Logo
+      color: $white;
+      font-size: 2.5em;
+      font-family: $mastoc;
+      text-align: center;
+      line-height: 120%;
+      margin-top: 30px;
+    }
+
+
+
+    ul{
+      @extend ul;
+      margin-top: 20px;
+      text-align: center;
+
+
+      li{
+        color: $gray3;
+        margin-left: 0px;
+        padding: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding: 0;
+        font-size: 1em;
+        height: auto!important;
+         span{
+          height: 70px;
+          display: table-cell;
+          vertical-align: middle;
+          /*margin: auto;*/
+          width: 120px;
+        }
+      }
+
+      li.selected{
+        color: $white;
+        background-color: $black;
+      }
+    }
+  }
+
+  //-------------------------        TOPBAR
+  #topbar{
+    @extend #sidebar;
+    width: 100%;
+    height: 100px;
+    background-color: $lightBlue;
+    z-index: 100;
+    ul {
+      list-style: none;
+      text-align: center;
+      width: auto;
+      margin: auto;
+      float: none !important;
+      display: inline-block;
+      margin-left: 120px;
+      display: block;
+      margin-top: 11px;
+      li {
+        width: 150px;
+        margin: auto;
+        display: block;
+        letter-spacing: .025em;
+        color: $lb2;
+        font-weight: 200;
+        text-align: center;
+        display: inline-block;
+        font-size: 1.3em;
+        height: auto;
+        #circle{
+          width: 72px;
+          height: 72px;
+          margin:auto;
+          border-radius: 50%;
+          border-width: 8px;
+          border-style: solid;
+          border-color: $gray2;
+          background-color: $gray5;
+          opacity: 1;
+          z-index: 4;
+          h1 {
+            padding: 0px;
+            margin-top: 6px;
+            color: $white;
+            font-weight: 700;
+            font-size: 4.3rem;
+          }
+        }
+        #circle.active{
+          background-color: $blue;
+        }
+        #circle.complete{
+
+        }
+      }
+      li.selected {
+
+        color: $white;
+        background-color: transparent;
+      }
+      hr{
+        margin-top: -39px;
+        width: 400px;
+        border-width: 8px;
+        border-color: $gray2;
+        z-index: 3;
+      }
+    }
+  }
+
+  //-------------------------         MAIN
+  #main {
+  border-radius: 15px;
+  position: relative;
+  top: 162px;
+  z-index: 1;
+  background-color: white;
+  width: 560px;
+  margin: auto;
+
+  }
+}
+
+.flexTopLeft{
+      border-top-left-radius: 20px;
+}
+
+.flexTopRight{
+      border-top-right-radius: 20px;
+}
+
+
+.flexBottomLeft{
+      border-bottom-left-radius: 20px;
+}
+
+
+.flexBottomRight{
+      border-bottom-right-radius: 20px;
+}
+
+.barFix{
+  margin-left: 120px;
+}
+
+.formRow{
+  display: flex;
+}
+.formBoxWrapper{
+  flex-direction: row;
+  display: flex;
+}
+
+.formBox{
+  height: 136px;
+  border: solid thin;
+  border-color: gray;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  padding: 20px 6%;
+}
+
+
+#flexcanvas{
+  width: 100%;
+  height: 600px !important;
+}
+
+.rowParent, .columnParent{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.columnParent{
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flexChild{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+
+#rowChild45052{
+ -webkit-box-flex: 1;
+ -webkit-flex-grow: 1;
+ -ms-flex-positive: 1;
+ flex-grow: 1;
+}
+
+
+#rowChild22367{
+ -webkit-box-flex: 1;
+ -webkit-flex-grow: 1;
+ -ms-flex-positive: 1;
+ flex-grow: 1;
+}
+
+
+#columnChild31678{
+ -webkit-box-flex: 2;
+ -webkit-flex-grow: 2;
+ -ms-flex-positive: 2;
+ flex-grow: 2;
+}
+
+button, input, select, textarea {
+    border: medium none;
+    margin-top: 30px;
+}
+
+select{
+  color: $gray2;
+}
+
+option{
+  color: $gray6;
+}
+
+option:first-child{
+  color: $gray1;
+}
+
+label{
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: $gray6;
+  font-family: open sans;
+}
